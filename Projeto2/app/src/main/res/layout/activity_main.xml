@@ -17,7 +17,7 @@
 
     <TextView
         android:layout_width="wrap_content"
-        android:layout_height="63dp"
+        android:layout_height="55dp"
         android:text="Nome completo"
         android:textSize="20dp" />
 
@@ -31,28 +31,41 @@
     <TextView
         android:id="@+id/text_message"
         android:layout_width="wrap_content"
-        android:layout_height="63dp"
+        android:layout_height="55dp"
         android:hint="Número celular"
         android:textSize="20sp" />
 
     <EditText
         android:id="@+id/numero_cel"
         android:layout_width="match_parent"
-        android:layout_height="66dp"
+        android:layout_height="50dp"
         android:layout_marginTop="6dp"
         android:inputType="phone" />
     <TextView
         android:id="@+id/automovel"
         android:layout_width="wrap_content"
-        android:layout_height="63dp"
+        android:layout_height="55dp"
         android:hint="Carro/Moto"
         android:textSize="20sp" />
 
     <EditText
         android:id="@+id/automovel_"
         android:layout_width="match_parent"
-        android:layout_height="66dp"
+        android:layout_height="50dp"
         android:layout_marginTop="6dp"
-        android:inputType="phone" />
+        android:inputType="text" />
+    <TextView
+        android:id="@+id/endereço"
+        android:layout_width="wrap_content"
+        android:layout_height="55dp"
+        android:hint="Endereço completo"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/endereço_"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="6dp"
+        android:inputType="text" />
 
 </LinearLayout>
