@@ -3,6 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/WashME-desagil.iml" filepath="$PROJECT_DIR$/.idea/WashME-desagil.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Washme.iml" filepath="$PROJECT_DIR$/Washme.iml" group="Washme" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" group="Washme/app" />
     </modules>
   </component>
 </project>

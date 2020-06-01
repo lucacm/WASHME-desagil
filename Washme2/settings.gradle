@@ -1,0 +1,2 @@
+rootProject.name='Washme'
+include ':app'
