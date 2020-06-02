@@ -16,7 +16,7 @@
         android:inputType="text" />
 
     <EditText
-        android:id="@+id/senha"
+        android:id="@+id/password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/username"
@@ -24,9 +24,10 @@
         android:hint="Password" />
 
     <Button
+        android:id="@+id/loginButton"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:layout_below="@id/senha"
+        android:layout_below="@id/password"
         android:layout_centerInParent="true"
         android:text="LOGIN"/>
 
