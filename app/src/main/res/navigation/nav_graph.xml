@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/hojeFragment">
+
+    <fragment
+        android:id="@+id/calendarFragment"
+        android:name="br.edu.insper.al.lucacm.washme.CalendarFragment"
+        android:label="Calendario"
+        tools:layout="@layout/fragment_calendar" />
+    <fragment
+        android:id="@+id/hojeFragment"
+        android:name="br.edu.insper.al.lucacm.washme.HojeFragment"
+        android:label="Hoje"
+        tools:layout="@layout/fragment_hoje" />
+    <fragment
+        android:id="@+id/servicosFragment"
+        android:name="br.edu.insper.al.lucacm.washme.ServicosFragment"
+        android:label="Servicos"
+        tools:layout="@layout/fragment_servicos" />
+</navigation>

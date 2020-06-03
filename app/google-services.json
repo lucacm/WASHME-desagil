@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "582449542854",
+    "firebase_url": "https://washme-8dcf4.firebaseio.com",
+    "project_id": "washme-8dcf4",
+    "storage_bucket": "washme-8dcf4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:582449542854:android:aa9e0eb12878f8f35fc9c7",
+        "android_client_info": {
+          "package_name": "br.edu.insper.al.lucacm.washme"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "582449542854-r0ma7d7u8i4g6po3mnhrnnp1bcgojfhn.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "br.edu.insper.al.lucacm.washme",
+            "certificate_hash": "e4a3d919004096d8968175d16b84fd5d09da47b6"
+          }
+        },
+        {
+          "client_id": "582449542854-e1g0ib31h1ct9vrmpqubqnbd1tr1lkp6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDI_2PmkJDl3v0rx0x_GQTZTLHV3RGb9eE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "582449542854-e1g0ib31h1ct9vrmpqubqnbd1tr1lkp6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
