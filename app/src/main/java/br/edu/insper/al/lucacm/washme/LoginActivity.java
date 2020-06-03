@@ -34,6 +34,7 @@ public class LoginActivity extends AppCompatActivity {
         ImageView logoView = findViewById(R.id.imageLogo);
         EditText emailView = findViewById(R.id.username);
         EditText passwordView = findViewById(R.id.password);
+        Button signupButton = findViewById(R.id.signupButton);
 
         logoView.setImageResource(R.drawable.washme_logo);
 
@@ -57,8 +58,15 @@ public class LoginActivity extends AppCompatActivity {
                     }
 
                 });
+
             }
 
+
+        });
+        signupButton.setOnClickListener((view) ->{
+
+            Intent intent = new Intent(this, SignupActivity.class);
+            startActivity(intent);
         });
 
 
