@@ -3,4 +3,9 @@
     <string name="hoje">Hoje</string>
     <string name="servicos">Services</string>
     <string name="calendar">Calendar</string>
+    <string name="password">Password</string>
+    <string name="username">Username</string>
+    <string name="login">LOGIN</string>
+    <string name="desc">desc</string>
+
 </resources>
