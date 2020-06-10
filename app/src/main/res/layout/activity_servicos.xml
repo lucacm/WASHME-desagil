@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ServicosActivity">
+
+    <TextView
+        android:id="@+id/client"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true" />
+
+    <TextView
+        android:id="@+id/servicetype"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/client"
+        android:hint="@string/tipo_de_servico"/>
+
+    <TextView
+        android:id="@+id/carro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/servicetype"
+        android:hint="Modelo do carro"/>
+
+    <TextView
+        android:id="@+id/placa"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/carro"
+        android:hint="Placa"/>
+
+    <TextView
+        android:id="@+id/banco"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/placa"
+        android:hint="Tipo de Banco"/>
+
+    <TextView
+        android:id="@+id/endereco"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/banco"
+        android:hint="Endereco"/>
+
+    <TextView
+        android:id="@+id/complemento"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/endereco"
+        android:hint="Complemento"/>
+
+    <TextView
+        android:id="@+id/coberto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/complemento"
+        android:hint="Coberto (s/n)"/>
+
+    <TextView
+        android:id="@+id/tomada"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/coberto"
+        android:hint="Tipo de tomada"/>
+
+    <TextView
+        android:id="@+id/data"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tomada"
+        android:hint="Data"/>
+
+    <TextView
+        android:id="@+id/periodo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/data"
+        android:hint="Periodo"/>
+
+    <TextView
+        android:id="@+id/observacoes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/periodo"
+        android:hint="Observacoes"/>
+
+    <Button
+        android:id="@+id/aceitar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/observacoes"
+        android:layout_marginTop="125dp"
+        android:text="@string/aceitar" />
+
+    <Button
+        android:id="@+id/recusar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/observacoes"
+        android:layout_marginTop="174dp"
+        android:text="@string/recusar" />
+
+</RelativeLayout>
+

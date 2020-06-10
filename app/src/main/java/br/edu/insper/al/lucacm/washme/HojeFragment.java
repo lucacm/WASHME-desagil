@@ -1,12 +1,23 @@
 package br.edu.insper.al.lucacm.washme;
 
+import android.app.Activity;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 
+import android.preference.PreferenceManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
+import android.widget.TextView;
+
+import java.util.Collections;
+import java.util.Objects;
 
 
 /**
@@ -23,6 +34,7 @@ public class HojeFragment extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+    private String Client;
 
     public HojeFragment() {
         // Required empty public constructor
@@ -37,15 +49,24 @@ public class HojeFragment extends Fragment {
      * @return A new instance of fragment HojeFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static HojeFragment newInstance(String param1, String param2) {
+//    public static HojeFragment newInstance(String param1, String param2) {
+//        HojeFragment fragment = new HojeFragment();
+//        Bundle args = new Bundle();
+//        args.putString(ARG_PARAM1, param1);
+//        args.putString(ARG_PARAM2, param2);
+//        fragment.setArguments(args);
+//        return fragment;
+//}
+    public static HojeFragment newInstance(String Client) {
+
         HojeFragment fragment = new HojeFragment();
         Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
+        args.putString("client",Client);
         fragment.setArguments(args);
-        return fragment;
-    }
 
+        return fragment;
+
+    }
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -53,12 +74,45 @@ public class HojeFragment extends Fragment {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
+
+
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_hoje, container, false);
+
+        View View = inflater.inflate(R.layout.fragment_hoje, container, false);
+
+
+        ListView ListView = (ListView) View.findViewById(R.id.listview);
+        Bundle bundle =  getActivity().getIntent().getExtras();
+        if (bundle != null) {
+            String Client = bundle.getString("todayclient");
+
+            ArrayAdapter<String> ListViewAdapter = new ArrayAdapter<String>(
+                    getActivity(),
+                    android.R.layout.simple_list_item_1,
+                    Collections.singletonList(Client));
+            ListView.setAdapter(ListViewAdapter);
+            ListView.setOnItemClickListener((parent, view, position, id) -> {
+                Intent intent = new Intent(getActivity(), ServicosActivity.class);
+                String client =(ListView.getItemAtPosition(position).toString());
+
+                intent.putExtra("client", client);
+                startActivity(intent);
+            });
+
+
+        }
+
+
+
+
+            // Inflate the layout for this fragment
+            return View;
+        }
+
+
     }
-}
+
