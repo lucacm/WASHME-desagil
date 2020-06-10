@@ -6,6 +6,7 @@ import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.NavigationUI;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 
@@ -24,6 +25,8 @@ public class MainActivity extends AppCompatActivity {
         NavigationUI.setupWithNavController(navBar, navController);
 
         NavigationUI.setupActionBarWithNavController(this, navController);
+
+        Intent intent = getIntent();
 
 
     }
