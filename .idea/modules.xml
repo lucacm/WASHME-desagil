@@ -3,6 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/WASHME.iml" filepath="$PROJECT_DIR$/WASHME.iml" group="WASHME" />
+      <module fileurl="file://$PROJECT_DIR$/WASHME-desagil-WASHME.iml" filepath="$PROJECT_DIR$/WASHME-desagil-WASHME.iml" group="WASHME" />
+      <module fileurl="file://$PROJECT_DIR$/app/WASHME-desagil-app.iml" filepath="$PROJECT_DIR$/app/WASHME-desagil-app.iml" group="WASHME/app" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" group="WASHME/app" />
     </modules>
   </component>

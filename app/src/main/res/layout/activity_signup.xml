@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SignupActivity">
+    tools:context=".SignupActivity"
+    android:background="@color/pretofundo">
 
     <EditText
         android:id="@+id/username"
@@ -13,7 +14,10 @@
         android:layout_centerInParent="true"
         android:hint="@string/username"
         android:inputType="text"
-        android:autofillHints="username" />
+        android:autofillHints="username"
+        android:textColorHint="@android:color/white"
+        android:textColor="@android:color/white"
+        android:textColorHighlight="@android:color/white"/>
 
     <EditText
         android:id="@+id/password"
@@ -22,7 +26,10 @@
         android:layout_below="@id/username"
         android:inputType="textPassword"
         android:hint="@string/password"
-        android:autofillHints="password" />
+        android:autofillHints="password"
+        android:textColor="@android:color/white"
+        android:textColorHint="@android:color/white"
+        android:textColorHighlight="@android:color/white"/>
 
     <Button
         android:id="@+id/SignupButton"
@@ -30,6 +37,8 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/password"
         android:layout_centerInParent="true"
-        android:text="@string/signup"/>
+        android:text="@string/signup"
+        android:background="@android:color/black"
+        android:textColor="@android:color/white"/>
 
 </RelativeLayout>
