@@ -4,90 +4,103 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ServicosActivity">
+    tools:context=".ServicosActivity"
+    android:background="@color/pretofundo">
 
     <TextView
         android:id="@+id/client"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true" />
+        android:layout_alignParentTop="true"
+        android:textColorHint="@android:color/white"/>
 
     <TextView
         android:id="@+id/servicetype"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/client"
-        android:hint="@string/tipo_de_servico"/>
+        android:hint="@string/tipo_de_servico"
+        android:textColorHint="@android:color/white"/>
 
     <TextView
         android:id="@+id/carro"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/servicetype"
-        android:hint="Modelo do carro"/>
+        android:hint="Modelo do carro"
+        android:textColorHint="@android:color/white"/>
 
     <TextView
         android:id="@+id/placa"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/carro"
-        android:hint="Placa"/>
+        android:hint="Placa"
+        android:textColorHint="@android:color/white"/>
 
     <TextView
         android:id="@+id/banco"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/placa"
-        android:hint="Tipo de Banco"/>
+        android:hint="Tipo de Banco"
+        android:textColorHint="@android:color/white"/>
 
     <TextView
         android:id="@+id/endereco"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/banco"
-        android:hint="Endereco"/>
+        android:hint="Endereco"
+        android:textColorHint="@android:color/white"/>
 
     <TextView
         android:id="@+id/complemento"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/endereco"
-        android:hint="Complemento"/>
+        android:hint="Complemento"
+        android:textColorHint="@android:color/white"/>
 
     <TextView
         android:id="@+id/coberto"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/complemento"
-        android:hint="Coberto (s/n)"/>
+        android:hint="Coberto (s/n)"
+        android:textColorHint="@android:color/white"/>
 
     <TextView
         android:id="@+id/tomada"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/coberto"
-        android:hint="Tipo de tomada"/>
+        android:hint="Tipo de tomada"
+        android:textColorHint="@android:color/white"/>
 
     <TextView
         android:id="@+id/data"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/tomada"
-        android:hint="Data"/>
+        android:hint="Data"
+        android:textColorHint="@android:color/white"/>
 
     <TextView
         android:id="@+id/periodo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/data"
-        android:hint="Periodo"/>
+        android:hint="Periodo"
+        android:textColorHint="@android:color/white"/>
 
     <TextView
         android:id="@+id/observacoes"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/periodo"
-        android:hint="Observacoes"/>
+        android:hint="Observacoes"
+        android:textColorHint="@android:color/white"/>
 
     <Button
         android:id="@+id/aceitar"
@@ -95,7 +108,9 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/observacoes"
         android:layout_marginTop="125dp"
-        android:text="@string/aceitar" />
+        android:text="@string/aceitar"
+        android:background="@android:color/black"
+        android:textColor="@android:color/white"/>
 
     <Button
         android:id="@+id/recusar"
@@ -103,7 +118,9 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/observacoes"
         android:layout_marginTop="174dp"
-        android:text="@string/recusar" />
+        android:text="@string/recusar"
+        android:background="@android:color/black"
+        android:textColor="@android:color/white"/>
 
 </RelativeLayout>
 
