@@ -128,6 +128,7 @@ public class ServicosActivity extends AppCompatActivity{
 
                 Intent intent = new Intent(ServicosActivity.this, MainActivity.class);
                 intent.putExtra("todayclient",client);
+                intent.putExtra("todaypos",pos);
 
                 startActivity(intent);
 

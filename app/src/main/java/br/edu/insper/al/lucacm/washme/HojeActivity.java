@@ -39,7 +39,7 @@ public class HojeActivity extends AppCompatActivity {
 
         assert bundle != null;
         String client = bundle.getString("client");
-        Integer pos = bundle.getInt("position2");
+        Integer pos = bundle.getInt("position");
 
         clientView.setText(client);
 

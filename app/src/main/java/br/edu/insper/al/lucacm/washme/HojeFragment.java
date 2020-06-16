@@ -90,7 +90,7 @@ public class HojeFragment extends Fragment {
         Bundle bundle =  getActivity().getIntent().getExtras();
         if (bundle != null) {
             String Client = bundle.getString("todayclient");
-            Integer pos = bundle.getInt("position");
+            Integer pos = bundle.getInt("todaypos");
 
             ArrayAdapter<String> ListViewAdapter = new ArrayAdapter<String>(
                     getActivity(),
@@ -115,10 +115,10 @@ public class HojeFragment extends Fragment {
             ListView.setOnItemClickListener((parent, view, position, id) -> {
                 Intent intent = new Intent(getActivity(), HojeActivity.class);
                 String client =(ListView.getItemAtPosition(position).toString());
-                Integer pos2 = (position + 1);
+
 
                 intent.putExtra("client", client);
-                intent.putExtra("position2", pos);
+                intent.putExtra("position", pos);
                 startActivity(intent);
 
             });
