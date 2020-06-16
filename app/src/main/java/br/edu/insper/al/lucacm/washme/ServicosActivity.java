@@ -63,15 +63,15 @@ public class ServicosActivity extends AppCompatActivity{
 
         assert bundle != null;
         String client = bundle.getString("client");
-        String data = bundle.getString("data");
+//        String data = bundle.getString("data");
         Integer pos = bundle.getInt("position");
 
         clientView.setText(client);
-        if(data.equals(today)){
-            dataView.setText("Hoje");
-        } else {
-            dataView.setText(data);
-        }
+//        if(data.equals(today)){
+//            dataView.setText("Hoje");
+//        } else {
+//            dataView.setText(data);
+//        }
 
         mDatabase = FirebaseDatabase.getInstance().getReference("1Fjw9VSKV6P0esNSHQYaNvMG04O4ien29y-GpBxH0bJg/Página1/"+pos.toString());
 
@@ -90,6 +90,7 @@ public class ServicosActivity extends AppCompatActivity{
                     String periodo = dataSnapshot.child("periodo").getValue(String.class);
                     String obs = dataSnapshot.child("detalhes").getValue(String.class);
                     String carmodel = dataSnapshot.child("modeloCarro").getValue(String.class);
+                    String data = dataSnapshot.child("dataAgendamento").getValue(String.class);
 
                     serviceView.setText(servicetype);
                     addressView.setText(address);
@@ -102,6 +103,7 @@ public class ServicosActivity extends AppCompatActivity{
                     tomadaView.setText(tomada);
                     periodoView.setText(periodo);
                     obsView.setText(obs);
+                    dataView.setText(data);
 
 
 
@@ -116,6 +118,8 @@ public class ServicosActivity extends AppCompatActivity{
             }
         });
         aceitarButton.setOnClickListener((view) ->{
+
+            String data = dataView.getText().toString();
 
             if(data.equals(today)) {
 
