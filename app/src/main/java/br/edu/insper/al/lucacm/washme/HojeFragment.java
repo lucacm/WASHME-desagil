@@ -3,6 +3,7 @@ package br.edu.insper.al.lucacm.washme;
 import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Color;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -89,20 +90,38 @@ public class HojeFragment extends Fragment {
         Bundle bundle =  getActivity().getIntent().getExtras();
         if (bundle != null) {
             String Client = bundle.getString("todayclient");
+            Integer pos = bundle.getInt("position");
 
             ArrayAdapter<String> ListViewAdapter = new ArrayAdapter<String>(
                     getActivity(),
                     android.R.layout.simple_list_item_1,
-                    Collections.singletonList(Client));
+                    Collections.singletonList(Client)){
+                @Override
+                public View getView(int position, View convertView, ViewGroup parent){
+                    // Get the Item from ListView
+                    View view = super.getView(position, convertView, parent);
+
+                    // Initialize a TextView for ListView each Item
+                    TextView tv = (TextView) view.findViewById(android.R.id.text1);
+
+                    // Set the text color of TextView (ListView Item)
+                    tv.setTextColor(Color.WHITE);
+
+                    // Generate ListView Item using TextView
+                    return view;
+                }
+            };
             ListView.setAdapter(ListViewAdapter);
             ListView.setOnItemClickListener((parent, view, position, id) -> {
-                Intent intent = new Intent(getActivity(), ServicosActivity.class);
+                Intent intent = new Intent(getActivity(), HojeActivity.class);
                 String client =(ListView.getItemAtPosition(position).toString());
+                Integer pos2 = (position + 1);
 
                 intent.putExtra("client", client);
+                intent.putExtra("position2", pos);
                 startActivity(intent);
-            });
 
+            });
 
         }
 

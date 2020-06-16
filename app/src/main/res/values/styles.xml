@@ -5,10 +5,10 @@
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/pretobarravai</item>
         <item name="colorPrimaryDark">@color/pretofundo</item>
-        <item name="colorAccent">@android:color/white</item>
+        <item name="colorAccent">@color/Verde</item>
     </style>
     <style name="CalenderViewCustom" parent="Theme.AppCompat">
-        <item name="colorAccent">@android:color/white</item>
+        <item name="colorAccent">@color/Verde</item>
         <item name="colorPrimary">@android:color/white</item>
     </style>
 

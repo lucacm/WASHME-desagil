@@ -17,8 +17,8 @@
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="-1dp"
         android:background="@color/pretobarravai"
-        app:itemIconTint="@android:color/white"
-        app:itemTextColor="@android:color/white"
+        app:itemIconTint="@color/Verde"
+        app:itemTextColor="@color/Verde"
         app:menu="@menu/bottom_navigation_menu" />
 
     <fragment
