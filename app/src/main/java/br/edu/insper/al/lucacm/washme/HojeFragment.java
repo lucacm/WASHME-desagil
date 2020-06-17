@@ -62,12 +62,13 @@ public class HojeFragment extends Fragment {
 
         HojeFragment fragment = new HojeFragment();
         Bundle args = new Bundle();
-        args.putString("client",Client);
+        args.putString("client", Client);
         fragment.setArguments(args);
 
         return fragment;
 
     }
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -87,51 +88,52 @@ public class HojeFragment extends Fragment {
 
 
         ListView ListView = (ListView) View.findViewById(R.id.listview);
-        Bundle bundle =  getActivity().getIntent().getExtras();
+        Bundle bundle = getActivity().getIntent().getExtras();
         if (bundle != null) {
             String Client = bundle.getString("todayclient");
             Integer pos = bundle.getInt("todaypos");
 
-            ArrayAdapter<String> ListViewAdapter = new ArrayAdapter<String>(
-                    getActivity(),
-                    android.R.layout.simple_list_item_1,
-                    Collections.singletonList(Client)){
-                @Override
-                public View getView(int position, View convertView, ViewGroup parent){
-                    // Get the Item from ListView
-                    View view = super.getView(position, convertView, parent);
+            if ((Client != null) && (pos != null)) {
 
-                    // Initialize a TextView for ListView each Item
-                    TextView tv = (TextView) view.findViewById(android.R.id.text1);
+                ArrayAdapter<String> ListViewAdapter = new ArrayAdapter<String>(
+                        getActivity(),
+                        android.R.layout.simple_list_item_1,
+                        Collections.singletonList(Client)) {
+                    @Override
+                    public View getView(int position, View convertView, ViewGroup parent) {
+                        // Get the Item from ListView
+                        View view = super.getView(position, convertView, parent);
 
-                    // Set the text color of TextView (ListView Item)
-                    tv.setTextColor(Color.WHITE);
+                        // Initialize a TextView for ListView each Item
+                        TextView tv = (TextView) view.findViewById(android.R.id.text1);
 
-                    // Generate ListView Item using TextView
-                    return view;
-                }
-            };
-            ListView.setAdapter(ListViewAdapter);
-            ListView.setOnItemClickListener((parent, view, position, id) -> {
-                Intent intent = new Intent(getActivity(), HojeActivity.class);
-                String client =(ListView.getItemAtPosition(position).toString());
+                        // Set the text color of TextView (ListView Item)
+                        tv.setTextColor(Color.WHITE);
+
+                        // Generate ListView Item using TextView
+                        return view;
+                    }
+                };
+                ListView.setAdapter(ListViewAdapter);
+                ListView.setOnItemClickListener((parent, view, position, id) -> {
+                    Intent intent = new Intent(getActivity(), HojeActivity.class);
+                    String client = (ListView.getItemAtPosition(position).toString());
 
 
-                intent.putExtra("client", client);
-                intent.putExtra("position", pos);
-                startActivity(intent);
+                    intent.putExtra("client", client);
+                    intent.putExtra("position", pos);
+                    startActivity(intent);
 
-            });
+                });
 
+
+                // Inflate the layout for this fragment
+
+
+            }
         }
-
-
-
-
-            // Inflate the layout for this fragment
-            return View;
-        }
-
-
+        return View;
     }
+
+}
 

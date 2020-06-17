@@ -1,12 +1,16 @@
 package br.edu.insper.al.lucacm.washme;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.CalendarView;
+import android.widget.DatePicker;
 
 
 /**
@@ -19,6 +23,8 @@ public class CalendarFragment extends Fragment {
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
+    private static final String TAG = "CalendarFragment" ;
+    private String date;
 
     // TODO: Rename and change types of parameters
     private String mParam1;
@@ -58,7 +64,43 @@ public class CalendarFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
+
+        View View = inflater.inflate(R.layout.fragment_calendar, container, false);
+
+
+        Bundle bundle = getActivity().getIntent().getExtras();
+        if (bundle != null) {
+            String date = bundle.getString("data2");
+            String client = bundle.getString("otherclient");
+            Integer pos = bundle.getInt("otherpos");
+            CalendarView calendar = (CalendarView) View.findViewById(R.id.calendar);
+
+            calendar.setOnDateChangeListener(new CalendarView.OnDateChangeListener() {
+                                                 @Override
+                                                 public void onSelectedDayChange(CalendarView calendarView, int i, int i1, int i2) {
+
+                                                     String dateSelected = "0" + (i1 + 1) + "/" + i2 + "/" + i;
+
+
+                                                     if (dateSelected.equals(date)) {
+                                                         Intent intent = new Intent(getActivity(), dataActivity.class);
+                                                         intent.putExtra("dclient",client);
+                                                         intent.putExtra("dpos", pos);
+                                                         startActivity(intent);
+
+                                                     } else {
+                                                         Log.d(TAG, "dateSelected: " + dateSelected);
+                                                         Log.d(TAG, "date: " + date);
+                                                     }
+                                                 }
+
+
+                                             }
+
+            );
+        }
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_calendar, container, false);
+        return View;
     }
 }

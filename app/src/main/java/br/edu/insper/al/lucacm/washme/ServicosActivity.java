@@ -46,7 +46,7 @@ public class ServicosActivity extends AppCompatActivity{
 
         Bundle bundle = getIntent().getExtras();
 
-
+        Button recusarButton = findViewById(R.id.recusar);
         TextView clientView = findViewById(R.id.client);
         Button   aceitarButton = findViewById(R.id.aceitar);
         TextView dataView = findViewById(R.id.data);
@@ -139,7 +139,25 @@ public class ServicosActivity extends AppCompatActivity{
 //                edit.putString("client",client);
 
 
+            } else {
+
+                Intent i = new Intent(ServicosActivity.this, MainActivity.class);
+                i.putExtra("otherclient",client);
+                i.putExtra("otherpos",pos);
+                i.putExtra("data2",data);
+
+                startActivity(i);
+
             }
+
+
+
+
+
+        });
+        recusarButton.setOnClickListener((view) ->{
+
+            finish();
 
 
 
